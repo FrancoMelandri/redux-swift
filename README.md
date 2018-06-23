@@ -10,7 +10,7 @@ My goal is to reproduce exactly the same result as in the javascript file below:
 let redux = require ('redux');
 
 
-function counter(staåte = 0, action) {
+function counter(state = 0, action) {
     switch (action.type) {
     case 'INCREMENT':
         return state + 1
