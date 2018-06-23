@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "redux-swift",
             targets: ["redux-swift"]),
+        .executable(
+            name: "MyApp", 
+            targets: ["MyApp"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,6 +24,9 @@ let package = Package(
         .target(
             name: "redux-swift",
             dependencies: []),
+        .target(
+            name: "MyApp",
+            dependencies: ["redux-swift"]),
         .testTarget(
             name: "redux-swiftTests",
             dependencies: ["redux-swift"]),

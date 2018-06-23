@@ -1,14 +1,14 @@
-typealias Storable = (State?, Action) -> State?
+public typealias Storable = (State?, Action) -> State?
 
-protocol State {
+public protocol State {
     var execute: Storable { get }
 }
 
-struct Action {
-    let type: String
-    let state: State?
+public struct Action {
+    public let type: String
+    public let state: State?
 
-    init(type: String,
+    public init(type: String,
          state: State? = nil) {
         self.type = type
         self.state = state

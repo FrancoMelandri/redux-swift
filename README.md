@@ -48,4 +48,39 @@ You can clone the repo and launch the test using the command:
 > swift test 
 ```
 
+You may also run the main application using the command:
+
+```
+> swift run
+```
+
+The main entry point looks like:
+```
+import Foundation
+import redux_swift
+
+let state = MyState()
+let store = Store(state)
+let actionInc = Action(type: "INC")
+let actionDec = Action(type: "DEC")
+let actionNop = Action(type: "NOP")
+
+var callback: () -> Void = {
+    print(store.getState()?.counter ?? 0)
+}
+store.subscribe(callback)
+
+store.dispatch(actionInc)
+store.dispatch(actionInc)
+store.dispatch(actionDec)
+store.dispatch(actionNop)
+```
+
+and the output is:
+```
+1
+2
+1
+1
+```
 
