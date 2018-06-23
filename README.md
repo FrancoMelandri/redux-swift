@@ -1,6 +1,6 @@
 # redux-swift
 
-Try to implment a simple and tiny redux flow in swift.
+Try to implement a simple and tiny redux flow in swift.
 
 My goal is to reproduce exactly the same result as in the javascript file below:
 
