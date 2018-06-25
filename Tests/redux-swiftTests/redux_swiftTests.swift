@@ -6,7 +6,7 @@ final class redux_swiftTests: XCTestCase {
 
     func testExample() {
         let state = MyState()
-        let store = Store(state)
+        let store = Store(state, SyncDispatcher())
         let actionInc = Action(type: MyState.INC)
         let actionDec = Action(type: MyState.DEC)
         let actionNop = Action(type: "NOP")
