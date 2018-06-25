@@ -7,8 +7,8 @@ final class redux_swiftTests: XCTestCase {
     func testExample() {
         let state = MyState()
         let store = Store(state)
-        let actionInc = Action(type: "INC")
-        let actionDec = Action(type: "DEC")
+        let actionInc = Action(type: MyState.INC)
+        let actionDec = Action(type: MyState.DEC)
         let actionNop = Action(type: "NOP")
     
         var callback: () -> Void = {

@@ -9,7 +9,7 @@ public struct Action {
     public let state: State?
 
     public init(type: String,
-         state: State? = nil) {
+                state: State? = nil) {
         self.type = type
         self.state = state
     }
